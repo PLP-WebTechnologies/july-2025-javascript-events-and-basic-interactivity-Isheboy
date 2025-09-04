@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Web Page - JavaScript Assignment</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>🚀 Interactive Web Page Demo</h1>
+      <p>
+        Welcome to my JavaScript assignment! Try out all the interactive
+        features below.
+      </p>
+
+      <!-- Dark/Light Mode Toggle Button -->
+      <button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="container">
+      <!-- Part 1: Event Handling Examples -->
+      <section class="section">
+        <h2>🎯 Part 1: Event Handling</h2>
+        <div class="demo-area">
+          <!-- Click Event -->
+          <div class="demo-item">
+            <h3>Click Event</h3>
+            <button id="click-btn" class="demo-button">Click Me!</button>
+            <p id="click-message" class="message"></p>
+          </div>
+
+          <!-- Mouse Events -->
+          <div class="demo-item">
+            <h3>Mouse Events</h3>
+            <div id="hover-box" class="hover-box">Hover over me!</div>
+            <p id="mouse-message" class="message"></p>
+          </div>
+
+          <!-- Keyboard Event -->
+          <div class="demo-item">
+            <h3>Keyboard Event</h3>
+            <input
+              type="text"
+              id="text-input"
+              placeholder="Type something..."
+              class="text-input"
+            />
+            <p id="keyboard-message" class="message"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Part 2: Interactive Elements -->
+      <section class="section">
+        <h2>🎮 Part 2: Interactive Features</h2>
+
+        <!-- Click Counter -->
+        <div class="demo-item">
+          <h3>Click Counter</h3>
+          <button id="counter-btn" class="demo-button">Count: 0</button>
+          <button id="reset-btn" class="reset-button">Reset</button>
+        </div>
+
+        <!-- Collapsible FAQ -->
+        <div class="demo-item">
+          <h3>Collapsible FAQ</h3>
+          <div class="faq-container">
+            <div class="faq-item">
+              <button class="faq-question">
+                What is JavaScript? <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  JavaScript is a programming language that makes websites
+                  interactive and dynamic!
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                How do event listeners work? <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Event listeners wait for specific actions (like clicks) and
+                  then run code when those actions happen.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                Why is form validation important?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Form validation ensures users enter correct information and
+                  provides a better user experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Simple Dropdown -->
+        <div class="demo-item">
+          <h3>Simple Dropdown Menu</h3>
+          <div class="dropdown">
+            <button id="dropdown-btn" class="dropdown-button">
+              Choose a Programming Language ▼
+            </button>
+            <div id="dropdown-content" class="dropdown-content">
+              <a href="#" data-value="javascript">JavaScript</a>
+              <a href="#" data-value="python">Python</a>
+              <a href="#" data-value="html">HTML</a>
+              <a href="#" data-value="css">CSS</a>
+            </div>
+          </div>
+          <p id="dropdown-message" class="message"></p>
+        </div>
+
+        <!-- Tabbed Interface -->
+        <div class="demo-item">
+          <h3>Tabbed Interface</h3>
+          <div class="tabs-container">
+            <div class="tabs">
+              <button class="tab-button active" data-tab="tab1">
+                About Me
+              </button>
+              <button class="tab-button" data-tab="tab2">My Skills</button>
+              <button class="tab-button" data-tab="tab3">Contact</button>
+            </div>
+            <div class="tab-content">
+              <div id="tab1" class="tab-panel active">
+                <h4>About Me</h4>
+                <p>
+                  I'm learning JavaScript and building interactive web pages!
+                  This assignment is helping me understand event handling and
+                  DOM manipulation.
+                </p>
+              </div>
+              <div id="tab2" class="tab-panel">
+                <h4>My Skills</h4>
+                <ul>
+                  <li>HTML - Structure</li>
+                  <li>CSS - Styling</li>
+                  <li>JavaScript - Interactivity</li>
+                </ul>
+              </div>
+              <div id="tab3" class="tab-panel">
+                <h4>Contact</h4>
+                <p>
+                  Feel free to reach out! I'm always excited to learn more about
+                  web development.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Part 3: Form Validation -->
+      <section class="section">
+        <h2>📋 Part 3: Form Validation</h2>
+        <div class="form-container">
+          <form id="signup-form" class="signup-form">
+            <h3>Sign Up Form</h3>
+
+            <div class="form-group">
+              <label for="fullname">Full Name:</label>
+              <input type="text" id="fullname" name="fullname" required />
+              <span class="error-message" id="fullname-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+              <span class="error-message" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required />
+              <span class="error-message" id="password-error"></span>
+              <small class="password-hint"
+                >Password must be at least 8 characters with uppercase,
+                lowercase, and number</small
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="confirm-password">Confirm Password:</label>
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                required
+              />
+              <span class="error-message" id="confirm-password-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="age">Age:</label>
+              <input
+                type="number"
+                id="age"
+                name="age"
+                min="13"
+                max="120"
+                required
+              />
+              <span class="error-message" id="age-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label>
+                <input type="checkbox" id="terms" name="terms" required />
+                I agree to the terms and conditions
+              </label>
+              <span class="error-message" id="terms-error"></span>
+            </div>
+
+            <button type="submit" class="submit-button">Sign Up</button>
+          </form>
+
+          <!-- Success Message -->
+          <div
+            id="success-message"
+            class="success-message"
+            style="display: none"
+          >
+            <h3>🎉 Success!</h3>
+            <p>Your account has been created successfully!</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>Made with ❤️ for JavaScript Assignment | Learn, Build, Grow!</p>
+    </footer>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
